@@ -9,22 +9,4 @@ type Donationinfo @model @auth(rules: [{allow: public}]) {
   type: String
   weight: Int
 }
-
-
-import { DataStore } from '@aws-amplify/datastore';
-import { Donationinfo } from './models';
-
-await DataStore.save(
-    new Donationinfo({
-		"address": "Lorem ipsum dolor sit amet",
-		"photo_url": "Lorem ipsum dolor sit amet",
-		"username": "Lorem ipsum dolor sit amet",
-		"trackid": 1020,
-		"date": "1970-01-01Z",
-		"deliverycompany": "Lorem ipsum dolor sit amet",
-		"type": "Lorem ipsum dolor sit amet",
-		"weight": 1020
-	})
-);
-
  
